@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+}
+
+.header-logo {
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-logo-img {
+    width: 6rem;
+}
+
+.header-navbar-ul {
+    display: flex;
+    align-items: center;
+}
+
+.header-navbar-menu {
+    display: none;
+}
+
+.header-navbar input {
+    display: none;
+}
+
+
+.header-navbar-ul li {
+    padding: 0px 5px;
+    list-style: none;
+}
+
+.header-navbar-ul li a {
+    color: #fff;
+}
+
+.section-banner {
+    background-image: url(../img/licor-barner.jpg);
+    background-size: auto;
+    height: 400px;
+    background-repeat: no-repeat;
+}
+
+.section-banner h1 {
+    color: #fff;
+    font-size: 5rem;
+    font-family: math;
+}
+
+.section-products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.section-products-title h2 {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.section-product {
+    max-width: 18rem;
+    padding: 15px 10px;
+}
+
+.section-product-img img {
+    width: 18rem;
+}
+
+.section-product-img img:hover {
+    height: 20rem;
+}
+
+.section-product-title h2 {
+    text-align: center;
+}
+
+.section-product-description p {
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    line-height: 1;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.section-product-description p:hover {
+    height: auto;
+    -webkit-line-clamp: inherit;
+}
+
+footer {
+    display: flex;
+    height: 100px;
+    padding: 4rem;
+    background-color: #000;
+    justify-content: center;
+    align-items: center;
+}
+
+footer i {
+    margin: 0px 10px;
+    color: #fff;
+}
+
+@media screen and (max-width: 425px) {
+    .header-navbar-ul {
+        display: none;
+
+    }
+
+    .header-navbar-menu {
+        display: block;
+    }
+
+    .header-navbar input:checked+ul {
+        display: block;
+    }
+
+    .header-navbar-menu {
+        display: block;
+        color: #fff;
+    }
+
+}

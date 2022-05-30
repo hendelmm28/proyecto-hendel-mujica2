@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contactanos</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+    
+        <nav>
+        
+            <ul>
+    
+                <li><a href="../index.html">INICIO</a></li>
+    
+                <li><a href="./productos.html">PRODUCTOS</a></li>
+    
+                <li><a href="./referencias.html">REFERENCIAS</a></li>
+    
+                <li><a href="./galeria.html">GALERIA</a></li>
+    
+                <li><a href="./contactanos.html">CONTACTOS</a></li>
+    
+    
+            </ul>
+    
+        </nav>
+    
+    </header>
+    <h1>Contactanos</h1>
+    <form action="enviar.php" method="get" enctype="text/plain"></form>
+    <div>
+        <label for="Nombre">Nombre:</label>
+        <input type="text" id="Nombre" placeholder="ingrese su nombre" required>
+    </div>
+    
+        <div>
+            <label for="Apellido">Apellido:</label>
+            <input type="text" id="Apellido" placeholder="ingrese su apellido" required>
+        </div>
+        <div>
+            <label for="DNI">DNI:</label>
+            <input type="numero" id="DNI" placeholder="numero de documento" required>
+        </div>
+        <div>
+            <label for="Email">Email:</label>
+            <input type="email" id="Email" placeholder="ingrese email" required>
+        </div>
+
+        <div>
+            <label for="adjunto">Adjuntar</label>
+            <input type="file" id="adjunto">
+        </div>
+        
+        <div>
+            <textarea name="comentarios" id="comentarios" cols="30" rows="5" placeholder="ingrese texto"></textarea>
+            
+        </div>
+        
+        <div>
+            <input type="submit">
+        </div>
+
+        <footer id="pie" style=" margin: 900; background-color: brown;">
+            <p>Cuando tu opinion sepa a ron, estas en lo correcto</p>
+        </footer>
+    
+</body>
+</html>
