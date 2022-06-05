@@ -70,7 +70,10 @@ header {
     grid-gap: 10px;
     width: 90%;
     margin: 0 auto;
+
 }
+
+
 
 .section-products-title h2 {
     margin: 30px auto;
@@ -108,8 +111,23 @@ header {
 }
 
 .section-product-description p:hover {
-    height: auto;
+    animation-name: mianimations;
+    animation-duration: 5s;
     -webkit-line-clamp: inherit;
+}
+
+@keyframes mianimations {
+    0% {
+        background-color: #fff;
+    }
+
+    50% {
+        background-color: tomato;
+    }
+
+    100% {
+        background-color: rgb(218, 106, 27);
+    }
 }
 
 footer {
@@ -150,4 +168,24 @@ footer i {
         color: #fff;
     }
 
+    .section-products {
+        display: grid;
+        grid-template-columns: initial;
+        grid-gap: 10px;
+        width: 90%;
+        margin: 0 auto;
+
+    }
+
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .section-products {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        width: 90%;
+        margin: 0 auto;
+
+    }
 }
