@@ -1,191 +1,223 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html,
 body {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: black;
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: black;
 }
 
 .header-logo {
-    display: flex;
-    padding: 5px;
-    justify-content: center;
-    align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .header-logo-img {
-    width: 6rem;
+  width: 6rem;
 }
 
-.header-navbar-ul {
-    display: flex;
-    align-items: center;
+.header-navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.header-navbar-menu {
-    display: none;
+.header-navbar ul li {
+  padding: 0px 5px;
+  list-style: none;
 }
 
-.header-navbar input {
-    display: none;
-}
-
-
-.header-navbar-ul li {
-    padding: 0px 5px;
-    list-style: none;
-}
-
-.header-navbar-ul li a {
-    color: #fff;
+.header-navbar ul li a {
+  color: white;
 }
 
 .section-banner {
-    background-image: url(../img/licor-barner.jpg);
-    background-size: auto;
-    height: 400px;
-    background-repeat: no-repeat;
+  background-image: url(../img/licor-barner.jpg);
+  background-size: auto;
+  height: 400px;
+  background-repeat: no-repeat;
 }
 
 .section-banner h1 {
-    color: #fff;
-    font-size: 5rem;
-    font-family: math;
+  color: #fff;
+  font-size: 5rem;
+  font-family: math;
 }
 
 .section-products {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    width: 90%;
-    margin: 0 auto;
-
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  width: 90%;
+  margin: 0 auto;
 }
 
-
-
 .section-products-title h2 {
-    margin: 30px auto;
-    text-align: center;
+  margin: 30px auto;
+  text-align: center;
 }
 
 .section-product {
-    max-width: 18rem;
-    padding: 15px 10px;
+  max-width: 18rem;
+  padding: 15px 10px;
 }
 
 .section-product-img img {
-    width: 18rem;
-}
-
-.section-product-img img:hover {
-    height: 20rem;
+  width: 18 rem;
 }
 
 .section-product-title h2 {
-    text-align: center;
+  text-align: center;
 }
 
 .section-product-description p {
-    display: block;
-    display: -webkit-box;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    line-height: 1;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  line-height: 1;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.section-product-description p:hover {
-    animation-name: mianimations;
-    animation-duration: 5s;
-    -webkit-line-clamp: inherit;
+.section-product-description p p:hover {
+  -webkit-animation-name: mianimations;
+  animation-name: mianimations;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-line-clamp: inherit;
+}
+
+@-webkit-keyframes mianimations {
+  0% {
+    background-color: #fff;
+  }
+
+  50% {
+    background-color: tomato;
+  }
+
+  100% {
+    background-color: #da6a1b;
+  }
 }
 
 @keyframes mianimations {
-    0% {
-        background-color: #fff;
-    }
+  0% {
+    background-color: #fff;
+  }
 
-    50% {
-        background-color: tomato;
-    }
+  50% {
+    background-color: tomato;
+  }
 
-    100% {
-        background-color: rgb(218, 106, 27);
-    }
+  100% {
+    background-color: #da6a1b;
+  }
 }
 
 footer {
-    display: flex;
-    height: 100px;
-    padding: 4rem;
-    background-color: #000;
-    justify-content: center;
-    align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  padding: 4rem;
+  background-color: #000;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 footer i {
-    margin: 0px 10px;
-    color: #000;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+  margin: 0px 10px;
+  color: #000;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+}
+
+@media screen and (max-width: $mobile) {
+  .header-navbar-ul {
+    display: none;
+  }
+
+  .header-navbar-menu {
+    display: block;
+  }
+
+  .header-navbar input:checked+ul {
+    display: block;
+  }
+
+  .header-navbar-menu {
+    display: block;
     color: #fff;
+  }
+
+  .section-products {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: initial;
+    grid-template-columns: initial;
+    grid-gap: 10px;
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
-
-@media screen and (max-width: 425px) {
-    .header-navbar-ul {
-        display: none;
-
-    }
-
-    .header-navbar-menu {
-        display: block;
-    }
-
-    .header-navbar input:checked+ul {
-        display: block;
-    }
-
-    .header-navbar-menu {
-        display: block;
-        color: #fff;
-    }
-
-    .section-products {
-        display: grid;
-        grid-template-columns: initial;
-        grid-gap: 10px;
-        width: 90%;
-        margin: 0 auto;
-
-    }
-
+@media screen and (min-width: $mobile) {
+  .section-products {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
-    .section-products {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 10px;
-        width: 90%;
-        margin: 0 auto;
-
-    }
-}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+
+    &-logo {
+        display: flex;
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &-logo-img {
+        width: 6rem;
+    }
+
+    &-navbar {
+        ul {
+            display: flex;
+            align-items: center;
+
+            li {
+                padding: 0px 5px;
+                list-style: none;
+
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+
+}
+
+.section-banner {
+    background-image: url(../img/licor-barner.jpg);
+    background-size: auto;
+    height: 400px;
+    background-repeat: no-repeat;
+
+    h1 {
+        color: #fff;
+        font-size: 5rem;
+        font-family: math;
+
+    }
+}
+
+.section-products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 90%;
+    margin: 0 auto;
+
+    &-title h2 {
+        margin: 30px auto;
+        text-align: center;
+    }
+}
+
+.section-product {
+    max-width: 18rem;
+    padding: 15px 10px;
+
+    &-img img {
+        width: 18 rem;
+
+    }
+
+    &-title h2 {
+        text-align: center;
+    }
+
+    &-description p {
+        display: block;
+        display: -webkit-box;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        line-height: 1;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        p:hover {
+            animation-name: mianimations;
+            animation-duration: 5s;
+            -webkit-line-clamp: inherit;
+
+        }
+
+    }
+}
+
+@keyframes mianimations {
+    0% {
+        background-color: #fff;
+    }
+
+    50% {
+        background-color: tomato;
+    }
+
+    100% {
+        background-color: rgb(218, 106, 27);
+    }
+}
+
+footer {
+    display: flex;
+    height: 100px;
+    padding: 4rem;
+    background-color: #000;
+    justify-content: center;
+    align-items: center;
+
+    & i {
+        margin: 0px 10px;
+        color: #000;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        color: #fff;
+
+    }
+
+}
+
+@media screen and (max-width: $mobile ) {
+    .header-navbar-ul {
+        display: none;
+
+    }
+
+    .header-navbar-menu {
+        display: block;
+    }
+
+    .header-navbar input:checked+ul {
+        display: block;
+    }
+
+    .header-navbar-menu {
+        display: block;
+        color: #fff;
+    }
+
+    .section-products {
+        display: grid;
+        grid-template-columns: initial;
+        grid-gap: 10px;
+        width: 90%;
+        margin: 0 auto;
+
+    }
+
+}
+
+@media screen and (min-width: $mobile) and (max-width: $tablet) {
+    .section-products {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        width: 90%;
+        margin: 0 auto;
+
+    }
+}
+
+@media screen and (min-width: $desktop) {}
