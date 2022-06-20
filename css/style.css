@@ -1,5 +1,5 @@
+/* variables */
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -12,51 +12,34 @@ body {
 }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   background-color: black;
 }
-
 .header-logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 5px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
-
 .header-logo-img {
   width: 6rem;
 }
-
 .header-navbar ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
-
 .header-navbar ul li {
   padding: 0px 5px;
   list-style: none;
 }
-
 .header-navbar ul li a {
   color: white;
+}
+
+nav.navbar-licores-dark {
+  background-color: #000000 !important;
 }
 
 .section-banner {
@@ -65,7 +48,6 @@ body {
   height: 400px;
   background-repeat: no-repeat;
 }
-
 .section-banner h1 {
   color: #fff;
   font-size: 5rem;
@@ -73,65 +55,29 @@ body {
 }
 
 .section-products {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   width: 90%;
   margin: 0 auto;
 }
-
+.section-products .btn-product-primary {
+  background-color: red;
+}
 .section-products-title h2 {
   margin: 30px auto;
   text-align: center;
-}
-
-.section-product {
-  max-width: 18rem;
-  padding: 15px 10px;
-}
-
-.section-product-img img {
-  width: 18 rem;
-}
-
-.section-product-title h2 {
-  text-align: center;
-}
-
-.section-product-description p {
-  display: block;
-  display: -webkit-box;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-  line-height: 1;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.section-product-description p p:hover {
-  -webkit-animation-name: mianimations;
-  animation-name: mianimations;
-  -webkit-animation-duration: 5s;
-  animation-duration: 5s;
-  -webkit-line-clamp: inherit;
 }
 
 @-webkit-keyframes mianimations {
   0% {
     background-color: #fff;
   }
-
   50% {
     background-color: tomato;
   }
-
   100% {
-    background-color: #da6a1b;
+    background-color: rgb(218, 106, 27);
   }
 }
 
@@ -139,47 +85,31 @@ body {
   0% {
     background-color: #fff;
   }
-
   50% {
     background-color: tomato;
   }
-
   100% {
-    background-color: #da6a1b;
+    background-color: rgb(218, 106, 27);
   }
 }
-
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 100px;
   padding: 4rem;
   background-color: #000;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
-
 footer i {
   margin: 0px 10px;
   color: #000;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   color: #fff;
 }
 
-@media screen and (max-width: $mobile) {
+@media screen and (max-width: 325px) {
   .header-navbar-ul {
     display: none;
   }
@@ -188,7 +118,7 @@ footer i {
     display: block;
   }
 
-  .header-navbar input:checked+ul {
+  .header-navbar input:checked + ul {
     display: block;
   }
 
@@ -198,26 +128,29 @@ footer i {
   }
 
   .section-products {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: initial;
     grid-template-columns: initial;
     grid-gap: 10px;
     width: 90%;
     margin: 0 auto;
   }
 }
+.map {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 
-@media screen and (min-width: $mobile) {
+@media screen and (min-width: 325px) and (max-width: 768px) {
   .section-products {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
+    display: block;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
     width: 90%;
     margin: 0 auto;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+  .section-products .card {
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=style.css.map */

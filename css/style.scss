@@ -1,3 +1,5 @@
+@import "./vars.scss";
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -44,6 +46,11 @@ body {
         }
     }
 
+
+}
+
+nav.navbar-licores-dark {
+    background-color: $bgprimary  !important;
 }
 
 .section-banner {
@@ -67,44 +74,13 @@ body {
     width: 90%;
     margin: 0 auto;
 
+    .btn-product-primary {
+        background-color: $colorprimary;
+    }
+
     &-title h2 {
         margin: 30px auto;
         text-align: center;
-    }
-}
-
-.section-product {
-    max-width: 18rem;
-    padding: 15px 10px;
-
-    &-img img {
-        width: 18 rem;
-
-    }
-
-    &-title h2 {
-        text-align: center;
-    }
-
-    &-description p {
-        display: block;
-        display: -webkit-box;
-        max-width: 100%;
-        height: auto;
-        margin: 0 auto;
-        line-height: 1;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-
-        p:hover {
-            animation-name: mianimations;
-            animation-duration: 5s;
-            -webkit-line-clamp: inherit;
-
-        }
-
     }
 }
 
@@ -172,13 +148,25 @@ footer {
 
 }
 
+.map {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+
 @media screen and (min-width: $mobile) and (max-width: $tablet) {
     .section-products {
-        display: grid;
+        display: block;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px;
         width: 90%;
         margin: 0 auto;
+
+        .card {
+            margin: 0 auto;
+        }
 
     }
 }
